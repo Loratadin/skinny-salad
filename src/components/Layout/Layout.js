@@ -5,7 +5,7 @@ const layout = (props) => (
     <Aux>
         <div> Toolbar, SideDrawer, Backdrop </div>
         <main>
-            {PaymentResponse.children}
+            {props.children}
         </main>
     </Aux>
 );
