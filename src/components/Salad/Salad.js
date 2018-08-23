@@ -1,9 +1,14 @@
 import React from 'react';
 import { Salad } from './Salad.style.js';
+import SaladIngredient from './SaladIngredient/SaladIngredient';
 
 const salad = (props) => {
  	return (
-		<Salad/>
+		<Salad>
+			<SaladIngredient type="topping" />
+			<SaladIngredient type="berry" />
+			<SaladIngredient type="salad-bed" />
+		</Salad>
 	);
 };
 
