@@ -1,12 +1,19 @@
 import React from 'react';
-import { SaladBed } from './SaladIngredient.style.js';
+import { SaladBed, Topping, Berry } from './SaladIngredient.style.js';
 
 const saladIngredient = (props) => {
 	 let ingredient = null;
 	 
 	 switch (props.type) {
-		 case ('salad-bed'):
-		 ingredient = <SaladBed/>
+		case ('salad-bed'):
+		 	ingredient = <SaladBed/>;
+		 	break;
+		case ('topping'): 
+			ingredient = <Topping/>;
+			break;
+		case ('berry'): 
+			ingredient = <Berry/>;
+			break;
 	 }
 
 };
