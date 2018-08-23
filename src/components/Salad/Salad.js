@@ -3,7 +3,7 @@ import { Salad } from './SaladIngredient/Salad.style';
 import SaladIngredient from './SaladIngredient/SaladIngredient';
 
 const salad = (props) => {
-	const transformedIngredients = Object.keys(props.ingredients)
+	let transformedIngredients = Object.keys(props.ingredients)
 	//keys method will transform our object 'ingredients' into array
 		.map(igKey => {
 			//map method will execute a function on each element of the array
@@ -12,7 +12,13 @@ const salad = (props) => {
 				return <SaladIngredient key={igKey + i} type={igKey} />;
 				//igKey is a name of an ingredient and i is the quontity
 			});
-		});
+		})
+		.reduce((arr, el) => {
+			return arr.concat(el)
+		}, []);
+		if (transformedIngredients.length === 0) {
+			transformedIngredients = <p>Please start adding ingredients!</p>;
+		}
  	return (
 		<Salad>
 			<SaladIngredient type="topping" />
