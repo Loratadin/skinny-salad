@@ -1,5 +1,5 @@
 import React from 'react';
-import { Salad } from './Salad.style.js';
+import { Salad } from './SaladIngredient/Salad.style';
 import SaladIngredient from './SaladIngredient/SaladIngredient';
 
 const salad = (props) => {

@@ -23,7 +23,7 @@ function tablet(...args) {
  `;
 }
 
-function desktop(...args) {
+function desktopL(...args) {
  return css`
     @media(min-width: ${sizes.desktopL}px) {
      ${css(...args)}
@@ -31,7 +31,7 @@ function desktop(...args) {
  `;
 }
 
-function monitor(...args) {
+function desktopXL(...args) {
  return css`
     @media(min-width: ${sizes.desktopXL}px) {
      ${css(...args)}

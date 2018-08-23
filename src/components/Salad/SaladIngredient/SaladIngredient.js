@@ -27,4 +27,4 @@ SaladIngredient.propTypes = {
 	type: PropTypes.string.isRequired
 };
 
-export default saladIngredient;
+export default SaladIngredient;
