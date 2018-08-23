@@ -3,10 +3,17 @@ import Aux from '../../hoc/Aux.js';
 import Salad from '../../components/Salad/Salad';
 
 class SaladBuilder extends Component {
+
+	state = {
+		ingredients: {
+			saladBed: 1,
+			topping: 2
+		}
+	}
  	render() {
 		 return (
 			<Aux>
-				<Salad/>
+				<Salad ingredients={this.state.ingredients}/>
 				<div>Build Controls</div>
 			</Aux>
 		 );
