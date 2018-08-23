@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SaladBed, Topping, Berry } from './SaladIngredient.style.js';
+import { SaladBed, Topping, BerryContainer, BlueBerry, CranBerry } from './SaladIngredient.style.js';
 import PropTypes from 'prop-types';
 class SaladIngredient extends Component {
 	render () {
@@ -13,7 +13,12 @@ class SaladIngredient extends Component {
 					ingredient = <Topping/>;
 					break;
 				case ('berry'): 
-					ingredient = <Berry/>;
+					ingredient = (
+						<BerryContainer>
+							<BlueBerry/>
+							<CranBerry/>		
+						</BerryContainer>
+					);
 					break;
 				default:
 					ingredient = null;

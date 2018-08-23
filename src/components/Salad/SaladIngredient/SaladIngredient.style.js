@@ -16,7 +16,15 @@ export const Topping = styled.div`
     margin: 2% auto;
 `;
 
-export const Berry = styled.div`
+export const BerryContainer = styled.div`
+	height: 20%;
+    width: 80%;
+    border-radius: 50% 50% 0 0;
+    margin: 2% auto;
+    position: relative;
+`;
+
+export const BlueBerry = styled.div`
 	width: 10%;
 	height: 15%;
 	position: absolute;
@@ -49,5 +57,29 @@ export const Berry = styled.div`
 		border-radius: 40%;
 		transform: rotate(60deg);
 		box-shadow: inset -1px -3px #140d36;
+	}
+`;
+
+export const CranBerry = styled.div`
+	width: 10%;
+    height: 15%;
+    position: absolute;
+    background-color: white;
+    left: 64%;
+    top: 50%;
+    border-radius: 40%;
+    transform: rotate(10deg);
+	box-shadow: inset -3px 0 #c9c9c9;
+	&:before {
+		content: "";
+    	width: 100%;
+    	height: 100%;
+    	position: absolute;
+    	background-color: #670318;
+    	left: 150%;
+    	top: -130%;
+    	border-radius: 40%;
+    	transform: rotate(90deg);
+    	box-shadow: inset 1px 3px #38040f;
 	}
 `;
