@@ -7,7 +7,7 @@ export const BuildControl = styled.div`
  margin: 5px 0;
 `;
 
-export const BCButton = styled.btn`
+export const BCButton = styled.a`
  display: block;
  font: inherit;
  padding: 5px;

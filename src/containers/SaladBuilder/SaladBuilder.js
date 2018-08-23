@@ -7,9 +7,9 @@ class SaladBuilder extends Component {
 
 	state = {
 		ingredients: {
-			saladBed: 0,
-			topping: 0,
-			berry: 0
+			saladBed: 1,
+			topping: 1,
+			berry: 1
 		}
 	}
  	render() {
