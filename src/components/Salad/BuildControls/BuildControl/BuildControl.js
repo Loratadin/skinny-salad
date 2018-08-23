@@ -1,11 +1,12 @@
 import React from 'react';
+import { BuildControl, BCButton } from './BuildControl.style';
 
 const buildControl = (props) => {
- <div>
+ <BuildControl>
   <div>{props.label}</div>
-  <button>Less</button>
-  <button>More</button>
- </div>
+  <BCButton>Less</BCButton>
+  <BCButton>More</BCButton>
+ </BuildControl>
 
 };
 
