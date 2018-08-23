@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../../../theme/media';
 
 export const Salad = styled.div`
 	width: 100%;
@@ -7,4 +8,16 @@ export const Salad = styled.div`
 	overflow: scroll;
 	text-align: center;
 	font-size: 1.2rem;
+	${media.tablet`
+    width: 350px;
+	height: 300px;
+    `}
+    ${media.desktopL`
+    width: 450px;
+	height: 400px;
+    `}
+    ${media.desktopXL`
+	width: 700px;
+	height: 600px;
+    `}
 `;
