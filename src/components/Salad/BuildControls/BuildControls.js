@@ -1,5 +1,5 @@
 import React from 'react';
-import { BuildControls, Price } from './BuildControls.style';
+import { BuildControls, Price, OrderButton } from './BuildControls.style';
 import BuildControl from './BuildControl/BuildControl';
 
 const controls = [
@@ -10,7 +10,7 @@ const controls = [
 const buildControls = (props) => {
  return (
   <BuildControls>
-   <Price>Current Price: {props.price.toFixed(2)}</Price>
+   <Price>Current PRICE: {props.price.toFixed(2)}</Price>
   {controls.map(ctrl => (
    <BuildControl 
    key={ctrl.label} 
@@ -19,6 +19,7 @@ const buildControls = (props) => {
    removed={() => props.ingredientRemoved(ctrl.type)} 
    disabled={props.disabled[ctrl.type]}/>
   ))}
+  <OrderButton>ORDER NOW</OrderButton>
  </BuildControls>
  )
 };
