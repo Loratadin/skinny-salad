@@ -64,7 +64,8 @@ class SaladBuilder extends Component {
 			}
 		 return (
 			<Aux>
-				<Modal>
+				<Modal show={this.state.purchasing}>
+				{/* only if purchasing is true Modal should be visible*/}
 					<OrderSummary ingredients={this.state.ingredients}/>
 				</Modal>
 				<Salad ingredients={this.state.ingredients}/>
@@ -72,6 +73,8 @@ class SaladBuilder extends Component {
 					ingredientAdded={this.addIngredientHandler}
 					ingredientRemoved={this.removeIngredientHandler}
 					disabled={disabledInfo}
+					purchasable={this.state.purchasable}
+					ordered={this.purchaseHandler}
 					price={this.state.totalPrice}/>
 			</Aux>
 		 );
