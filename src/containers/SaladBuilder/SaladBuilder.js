@@ -3,6 +3,7 @@ import Aux from '../../hoc/Aux.js';
 import Salad from '../../components/Salad/Salad';
 import BuildControls from '../../components/Salad/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/Salad/OrderSummary/OrderSummary';
 
 const INGREDIENT_PRICES = {
 	saladBed: 1,
@@ -57,7 +58,9 @@ class SaladBuilder extends Component {
 			}
 		 return (
 			<Aux>
-				<Modal/>
+				<Modal>
+					<OrderSummary/>
+				</Modal>
 				<Salad ingredients={this.state.ingredients}/>
 				<BuildControls
 					ingredientAdded={this.addIngredientHandler}
