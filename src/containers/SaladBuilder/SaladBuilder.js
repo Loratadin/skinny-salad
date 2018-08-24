@@ -59,7 +59,7 @@ class SaladBuilder extends Component {
 		 return (
 			<Aux>
 				<Modal>
-					<OrderSummary/>
+					<OrderSummary ingredients={this.state.ingredients}/>
 				</Modal>
 				<Salad ingredients={this.state.ingredients}/>
 				<BuildControls
