@@ -21,11 +21,11 @@ export const OrderButton = styled.a`
     outline: none;
     cursor: pointer;
     border: 1px solid #966909;
+    border-radius: 20px;
     color: #966909;
     font-family: inherit;
     font-size: 1.2em;
     padding: 15px 30px;
-    box-shadow: 2px 2px 2px #966909;
     &:hover,
     &:active {
      background-color: #A0DB41;
