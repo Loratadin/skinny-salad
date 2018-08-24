@@ -68,7 +68,7 @@ class SaladBuilder extends Component {
 			}
 		 return (
 			<Aux>
-				<Modal show={this.state.purchasing}>
+				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
 				{/* only if purchasing is true Modal should be visible*/}
 					<OrderSummary ingredients={this.state.ingredients}/>
 				</Modal>
