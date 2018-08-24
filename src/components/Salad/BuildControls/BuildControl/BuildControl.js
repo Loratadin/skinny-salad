@@ -6,7 +6,7 @@ const buildControl = (props) => {
   <BuildControl>
   <Label>{props.label}</Label>
   <BCButton>Less</BCButton>
-  <BCButton>More</BCButton>
+  <BCButton onClick={props.added}>More</BCButton>
  </BuildControl>
  )
 };

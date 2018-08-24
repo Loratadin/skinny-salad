@@ -39,7 +39,8 @@ class SaladBuilder extends Component {
 		 return (
 			<Aux>
 				<Salad ingredients={this.state.ingredients}/>
-				<BuildControls/>
+				<BuildControls
+					ingredientAdded={this.addIngredientHandler}/>
 			</Aux>
 		 );
 
