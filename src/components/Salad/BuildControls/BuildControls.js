@@ -7,12 +7,14 @@ const controls = [
  { label: 'Topping', type: 'topping' },
 ];
 
-const buildControls = (props) => (
- <BuildControls>
+const buildControls = (props) => {
+ return (
+  <BuildControls>
   {controls.map(ctrl => (
    <BuildControl key={ctrl.label} label={ctrl.label} />
   ))}
  </BuildControls>
-);
+ )
+};
 
 export default buildControls;
