@@ -1,9 +1,10 @@
 import React from 'react';
+import { Modal } from './Modal.style';
 
 const modal = (props) => {
- <div>
+ <Modal>
   {props.children}
- </div>
+ </Modal>
 };
 
 export default modal;
