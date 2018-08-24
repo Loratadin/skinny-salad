@@ -49,7 +49,8 @@ class SaladBuilder extends Component {
 			<Aux>
 				<Salad ingredients={this.state.ingredients}/>
 				<BuildControls
-					ingredientAdded={this.addIngredientHandler}/>
+					ingredientAdded={this.addIngredientHandler}
+					ingredientRemoved={this.removeIngredientHandler}/>
 			</Aux>
 		 );
 
