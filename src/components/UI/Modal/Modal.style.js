@@ -3,7 +3,7 @@ import media from '../../../theme/media';
 
 export const Modal = styled.div`
  position: fixed;
- z-index: 500;
+ z-index: 2;
  background-color: white;
  width: 70%;
  border: 1px solid #ccc;
