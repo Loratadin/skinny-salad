@@ -10,3 +10,8 @@ export const BuildControls = styled.div`
  margin: auto;
  padding: 10px 0;
 `;
+
+export const Price = styled.p`
+font-size: 30px;
+color: green;
+`;
