@@ -12,9 +12,9 @@ class SaladBuilder extends Component {
 
 	state = {
 		ingredients: {
-			saladBed: 1,
-			topping: 1,
-			berry: 1
+			saladBed: 0,
+			topping: 0,
+			berry: 0
 		},
 		totalPrice: 3
 	}
@@ -60,7 +60,8 @@ class SaladBuilder extends Component {
 				<BuildControls
 					ingredientAdded={this.addIngredientHandler}
 					ingredientRemoved={this.removeIngredientHandler}
-					disabled={disabledInfo}/>
+					disabled={disabledInfo}
+					price={this.state.totalPrice}/>
 			</Aux>
 		 );
 
