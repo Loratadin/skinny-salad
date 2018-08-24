@@ -51,7 +51,7 @@ class SaladBuilder extends Component {
 		this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
 	}
 
-	purchaseHandler () {
+	purchaseHandler = () => {
 		this.setState({purchasing: true});
 	}
 
