@@ -18,7 +18,9 @@ class SaladBuilder extends Component {
 			topping: 0,
 			berry: 0
 		},
-		totalPrice: 3
+		totalPrice: 3,
+		purchasable: false,
+		purchasing: false,
 	}
 
 	addIngredientHandler = (type) => {
@@ -47,6 +49,10 @@ class SaladBuilder extends Component {
 		const oldPrice = this.state.totalPrice;
 		const newPrice = oldPrice - priceDeduction;
 		this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
+	}
+
+	purchaseHandler () {
+		this.setState({purchasing: true});
 	}
 
  	render() {
