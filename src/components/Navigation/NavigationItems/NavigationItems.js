@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavigationItems } from './NavigationItems.style';
 
 const navigationItems = (props) => (
-    <ul>
-        <li><a href="/">A Link</a></li>
-    </ul>
+    <NavigationItems>
+        
+    </NavigationItems>
 );
 
 export default navigationItems;
