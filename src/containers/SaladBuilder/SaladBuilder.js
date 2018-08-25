@@ -59,6 +59,10 @@ class SaladBuilder extends Component {
 		this.setState({purchasing: false})
 	}
 
+	purchaseContinueHandler = () => {
+		alert('You continue!');
+	}
+
  	render() {
 			const disabledInfo = {
 					...this.state.ingredients
@@ -70,7 +74,10 @@ class SaladBuilder extends Component {
 			<Aux>
 				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
 				{/* only if purchasing is true Modal should be visible*/}
-					<OrderSummary ingredients={this.state.ingredients}/>
+					<OrderSummary 
+						ingredients={this.state.ingredients}
+						purchaseCanceled={this.purchaseCancelHandler}
+						purchaseContinued={this.purchaseContinueHandler}/>
 				</Modal>
 				<Salad ingredients={this.state.ingredients}/>
 				<BuildControls
