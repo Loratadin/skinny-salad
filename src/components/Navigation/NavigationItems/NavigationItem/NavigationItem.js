@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavigationItem } from './NavigationItem.style';
 
 const navigationItem = (props) => (
-    <li><a href="/">A Link</a></li>
+    <NavigationItem><a href="/">A Link</a></NavigationItem>
 );
 
 export default navigationItem;
