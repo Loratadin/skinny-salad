@@ -18,6 +18,6 @@ export const Salad = styled.div`
     `}
     ${media.desktopXL`
 	width: 700px;
-	height: 600px;
+	height: 410px;
     `}
 `;

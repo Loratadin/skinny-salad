@@ -6,7 +6,7 @@ export const Toolbar = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #a7356d;
+    background-color: #ccce0b;
     display: flex;
     justify-content: space-between;
     align-items: center;

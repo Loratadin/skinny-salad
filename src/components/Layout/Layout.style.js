@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
-	margin-top: 25px;
+	margin-top: 80px;
 `;
