@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Button = styled.a`
-    background-color: transparent;
+    background-color: #5C9210;
     border: none;
+    border-radius: 10px;
+    text-align: center;
     color: white;
     outline: none;
     cursor: pointer;
