@@ -76,7 +76,7 @@ class SaladBuilder extends Component {
 				{/* only if purchasing is true Modal should be visible*/}
 					<OrderSummary 
 						ingredients={this.state.ingredients}
-						purchaseCanceled={this.purchaseCancelHandler}
+						purchaseCancelled={this.purchaseCancelHandler}
 						purchaseContinued={this.purchaseContinueHandler}/>
 				</Modal>
 				<Salad ingredients={this.state.ingredients}/>

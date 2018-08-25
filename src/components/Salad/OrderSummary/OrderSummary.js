@@ -16,8 +16,8 @@ const orderSummary = props => {
       <p>Delicious Salad with the following ingredients:</p>
       <ul>{ingredientSummary}</ul>
       <p>Continue to Checkout?</p>
-      <button style={{color: "#944317"}} clicked={}>CANCEL</button>
-      <button style={{color: "#5C9210"}} clicked={}>CONTINUE</button>
+      <button style={{color: "#944317"}} clicked={props.purchaseCancelled}>CANCEL</button>
+      <button style={{color: "#5C9210"}} clicked={props.purchaseContinued}>CONTINUE</button>
     </Aux>
   );
 };
