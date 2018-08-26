@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import { SideDrawer } from './SideDrawer.style';
+import { SideDrawer, SideDrawerLogoContainer } from './SideDrawer.style';
 
 const openDivStyle = {
     transform: 'translateX(0)'
@@ -13,7 +13,9 @@ const sideDrawer = (props) => {
     //...
     return (
         <SideDrawer>
-            <Logo/>
+            <SideDrawerLogoContainer>
+                <Logo/>
+            </SideDrawerLogoContainer>
             <nav>
                 <NavigationItems/>
             </nav>

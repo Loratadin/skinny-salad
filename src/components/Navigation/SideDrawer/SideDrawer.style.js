@@ -9,11 +9,16 @@ export const SideDrawer = styled.div`
     left: 0;
     top: 0;
     z-index: 2;
-    background-color: white;
+    background-color: green;
+    opacity: 0.9;
     padding: 32px 16px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
     ${media.tablet`
     display: none;
     `}
+`;
+
+export const SideDrawerLogoContainer = styled.div`
+    height: 11%;
 `;

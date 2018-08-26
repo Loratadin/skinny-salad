@@ -17,3 +17,7 @@ export const Toolbar = styled.div`
         height: 100%;
     }
 `;
+
+export const ToolbarLogoContainer = styled.div`
+    height: 80%;
+`;
