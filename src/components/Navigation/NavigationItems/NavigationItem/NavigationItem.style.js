@@ -8,6 +8,7 @@ export const NavigationItem = styled.div`
     height: 100%;
     & > a {
         text-decoration: none;
+        color: white;
         height: 100%;
         padding: 16px 10px;
         border-bottom: 4px solid transparent;
@@ -17,7 +18,7 @@ export const NavigationItem = styled.div`
     & > a:hover,
     & > a:active,
     & > a.active {
-        background-color: #a3a325;
-        border-bottom: 4px solid #40A4C8;
+        background-color: #b3b32a;
+        border-bottom: 4px solid #53c75c;
     }
 `;
