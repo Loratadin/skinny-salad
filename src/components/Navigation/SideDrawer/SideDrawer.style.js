@@ -21,4 +21,5 @@ export const SideDrawer = styled.div`
 
 export const SideDrawerLogoContainer = styled.div`
     height: 11%;
+    margin-bottom: 32px;
 `;

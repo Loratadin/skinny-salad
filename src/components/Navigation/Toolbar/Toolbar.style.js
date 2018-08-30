@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../../theme/media';
 
 export const Toolbar = styled.div`
     height: 56px;
@@ -20,4 +21,11 @@ export const Toolbar = styled.div`
 
 export const ToolbarLogoContainer = styled.div`
     height: 80%;
+`;
+
+export const DesktopOnly = styled.div`
+    display: none;
+    ${media.desktopL`
+        display: block;
+    `}
 `;

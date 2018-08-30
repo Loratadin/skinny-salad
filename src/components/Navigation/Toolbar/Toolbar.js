@@ -1,5 +1,5 @@
 import React from 'react';
-import { Toolbar, ToolbarLogoContainer } from './Toolbar.style';
+import { Toolbar, ToolbarLogoContainer, DesktopOnly } from './Toolbar.style';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
@@ -9,9 +9,9 @@ const toolbar = (props) => (
         <ToolbarLogoContainer>
             <Logo />
         </ToolbarLogoContainer>
-        <nav>
+        <DesktopOnly>
             <NavigationItems/>
-        </nav>
+        </DesktopOnly>
     </Toolbar>
 );
 
