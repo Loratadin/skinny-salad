@@ -6,6 +6,7 @@ export const NavigationItem = styled.div`
     box-sizing: border-box;
     display: block;
     width: 100%;
+    height: auto;
     & > a {
         text-decoration: none;
         color: white;
@@ -23,11 +24,12 @@ export const NavigationItem = styled.div`
             height: 100%;
             padding: 16px 10px;
             border-bottom: 4px solid transparent;
+            border-radius: 15px;
         }
         & > a:hover,
         & > a:active,
         & > a.active {
-            background-color: #b3b32a;
+            background-color: #8fbd25;
             border-bottom: 4px solid #53c75c;
         }
     `}

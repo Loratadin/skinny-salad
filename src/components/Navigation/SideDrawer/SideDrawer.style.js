@@ -14,9 +14,9 @@ export const SideDrawer = styled.div`
     padding: 32px 16px;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
-    ${media.tablet`
-    display: none;
-    `}
+    // ${media.tablet`
+    //     display: none;
+    // `}
 `;
 
 export const SideDrawerLogoContainer = styled.div`
