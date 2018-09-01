@@ -2,6 +2,8 @@ import React from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import { SideDrawer, SideDrawerLogoContainer } from './SideDrawer.style';
+import Backdrop from '../../UI/Backdrop/Backdrop';
+import Aux from '../../../hoc/Aux';
 
 const openDivStyle = {
     transform: 'translateX(0)'
@@ -12,14 +14,17 @@ const closeDivStyle = {
 const sideDrawer = (props) => {
     //...
     return (
-        <SideDrawer>
-            <SideDrawerLogoContainer>
-                <Logo/>
-            </SideDrawerLogoContainer>
-            <nav>
-                <NavigationItems/>
-            </nav>
-        </SideDrawer>
+        <Aux>
+            <Backdrop show/>
+            <SideDrawer>
+                <SideDrawerLogoContainer>
+                    <Logo/>
+                </SideDrawerLogoContainer>
+                <nav>
+                    <NavigationItems/>
+                </nav>
+            </SideDrawer>
+        </Aux>
     );
 };
 
