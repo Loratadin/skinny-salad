@@ -5,19 +5,22 @@ import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 
 class Layout extends Component {
-    // constructor(props) {
-    //     super(props);
+    constructor(props) {
+        super(props);
+        state = {
+            showSideDrawer: true
+        }
         
     //     this.menuWrapperClasses = ['menu-wrapper'];
     //     this.state = { show: false };
     //     this.showSideDrawer = this.showSideDrawer.bind(this)
     //   }
       
-    //   showSideDrawer = () => {
-    //     this.toggleSideDrawer();
-    //     const {show} = this.state;
-    //     this.setState( { show: !show } )
-    //   }
+       showSideDrawer = () => {
+        this.toggleSideDrawer();
+        const {show} = this.state;
+        this.setState( { show: !show } )
+      }
       
     //   toggleSideDrawer = () => {
     //     if (this.sideDrawerClasses.length === 1) {
@@ -26,19 +29,25 @@ class Layout extends Component {
     //       this.menuWrapperClasses.pop();
     //     }
     //   }
-    // state = {
-    //     showSideDrawer: true
-    // }
+    
     // sideDrawerClosedHandler = () => {
     //     this.setState({showSideDrawer: false});
     // }
+
+    sideDrawerToggleHandler = () => {
+        this.setState((prevState) => {
+            return {showSideDrawer: !prevState.showSideDrawer };
+            });
+    }
+}
     render () {
         return (
             <Aux>
                 <Toolbar/>
-                {/* <SideDrawer 
-                    open={this.state.showSideDrawer} 
-                    closed={this.sideDrawerClosedHandler} /> */}
+                <SideDrawer 
+                    // open={this.state.showSideDrawer} 
+                    // closed={this.sideDrawerClosedHandler} 
+                    />
                 <Content>
                     {this.props.children}
                 </Content>
