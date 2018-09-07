@@ -10,18 +10,18 @@ class sideDrawer extends Component  {
     constructor(props) {
         super(props);
 
-        const showSideDrawer = () => {
-            this.toggleSideDrawer();
-            const {show} = this.state;
-            this.setState( { show: !show } )
-            }
-        const toggleSideDrawer = () => {
-            if (this.sideDrawerClasses.length === 1) {
-                this.sideDrawerClasses.push('open');
-            } else {
-                this.menuWrapperClasses.pop();
-            }
-            }
+        // const showSideDrawer = () => {
+        //     this.toggleSideDrawer();
+        //     const {show} = this.state;
+        //     this.setState( { show: !show } )
+        //     }
+        // const toggleSideDrawer = () => {
+        //     if (this.sideDrawerClasses.length === 1) {
+        //         this.sideDrawerClasses.push('open');
+        //     } else {
+        //         this.menuWrapperClasses.pop();
+        //     }
+            // }
     return (
         <Aux>
             <Backdrop show={props.open} clicked={props.closed}/>

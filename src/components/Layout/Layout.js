@@ -26,19 +26,19 @@ class Layout extends Component {
     //       this.menuWrapperClasses.pop();
     //     }
     //   }
-    state = {
-        showSideDrawer: true
-    }
-    sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false});
-    }
+    // state = {
+    //     showSideDrawer: true
+    // }
+    // sideDrawerClosedHandler = () => {
+    //     this.setState({showSideDrawer: false});
+    // }
     render () {
         return (
             <Aux>
                 <Toolbar/>
-                <SideDrawer 
+                {/* <SideDrawer 
                     open={this.state.showSideDrawer} 
-                    closed={this.sideDrawerClosedHandler} />
+                    closed={this.sideDrawerClosedHandler} /> */}
                 <Content>
                     {this.props.children}
                 </Content>
