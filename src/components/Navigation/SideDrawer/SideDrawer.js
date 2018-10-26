@@ -6,6 +6,10 @@ import Backdrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/Aux';
 import './SideDrawer.css';
 
+const toggleSideDrawerClass = () => {
+    let mobileMenu = document.getElementById('side-drawer');
+    mobileMenu.classList.toggle('open');
+}
 class sideDrawer extends Component  {
         // const showSideDrawer = () => {
         //     this.toggleSideDrawer();
@@ -21,9 +25,8 @@ class sideDrawer extends Component  {
         render() {
     return (
         <Aux>
-            {/* <Backdrop show={props.open} clicked={props.closed}/> */}
-            <Backdrop/>
-            <SideDrawer >
+            <Backdrop show={this.props.open} clicked={this.props.closed}/>
+            <SideDrawer id="side-drawer" className="closed" onClick={toggleSideDrawerClass}>
                 <SideDrawerLogoContainer>
                     <Logo/>
                 </SideDrawerLogoContainer>
