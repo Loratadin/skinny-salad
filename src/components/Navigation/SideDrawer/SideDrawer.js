@@ -7,9 +7,6 @@ import Aux from '../../../hoc/Aux';
 import './SideDrawer.css';
 
 class sideDrawer extends Component  {
-    constructor(props) {
-        super(props);
-
         // const showSideDrawer = () => {
         //     this.toggleSideDrawer();
         //     const {show} = this.state;
@@ -21,10 +18,11 @@ class sideDrawer extends Component  {
         //     } else {
         //         this.menuWrapperClasses.pop();
         //     }
-            // }
+        render() {
     return (
         <Aux>
-            <Backdrop show={props.open} clicked={props.closed}/>
+            {/* <Backdrop show={props.open} clicked={props.closed}/> */}
+            <Backdrop/>
             <SideDrawer >
                 <SideDrawerLogoContainer>
                     <Logo/>
@@ -36,6 +34,5 @@ class sideDrawer extends Component  {
         </Aux>
     );
     }
-    }   
-
-export default SideDrawer;
+}
+export default sideDrawer;

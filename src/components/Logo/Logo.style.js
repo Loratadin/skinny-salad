@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Logo = styled.div`
-    height: 100%;
+    width: 50px;
     & > img {
-        height: 100%;
+       width: 100%;
+       display: block;
     }
 `;
