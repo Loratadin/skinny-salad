@@ -7,21 +7,10 @@ import Aux from '../../../hoc/Aux';
 import './SideDrawer.css';
 
 const toggleSideDrawerClass = () => {
-    let mobileMenu = document.getElementById('side-drawer');
+    let mobileMenu = document.getElementsByName('side-drawer');
     mobileMenu.classList.toggle('open');
 }
 class sideDrawer extends Component  {
-        // const showSideDrawer = () => {
-        //     this.toggleSideDrawer();
-        //     const {show} = this.state;
-        //     this.setState( { show: !show } )
-        //     }
-        // const toggleSideDrawer = () => {
-        //     if (this.sideDrawerClasses.length === 1) {
-        //         this.sideDrawerClasses.push('open');
-        //     } else {
-        //         this.menuWrapperClasses.pop();
-        //     }
         render() {
     return (
         <Aux>
