@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from '../../../theme/media';
 
-export const Modal = styled.div`
+export const ModalStyle = styled.div`
  position: fixed;
  z-index: 2;
  background-color: white;
