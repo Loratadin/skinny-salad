@@ -4,6 +4,7 @@ import Salad from '../../components/Salad/Salad';
 import BuildControls from '../../components/Salad/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Salad/OrderSummary/OrderSummary';
+import axios from '../../axios-orders';
 
 const INGREDIENT_PRICES = {
 	saladBed: 1,
@@ -60,7 +61,24 @@ class SaladBuilder extends Component {
 	}
 
 	purchaseContinueHandler = () => {
-		alert('You continue!');
+		// alert('You continue!');
+		const order = {
+			ingredients: this.state.ingredients,
+			price: this.state.totalPrice,
+			customer: {
+				name: 'Tania Shulga',
+				address: {
+					street: 'TestStreet',
+					zipCode: '37287',
+					city: 'McKinney'
+				},
+				email: 'test@test.com'
+			},
+			deliveryMethod: 'fastest'
+		}
+		axios.post('/orders.json', order)
+			.then(response => console.log(response))
+			.catch(error => console.log(error));
 	}
 
  	render() {
