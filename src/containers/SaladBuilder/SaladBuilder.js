@@ -15,17 +15,24 @@ const INGREDIENT_PRICES = {
 }
 class SaladBuilder extends Component {
 
-	state = {
-		ingredients: {
-			saladBed: 0,
-			topping: 0,
-			berry: 0
-		},
-		totalPrice: 3,
-		purchasable: false,
-		purchasing: false,
-		loading: false,
-	}
+state = {
+	ingredients: null,
+	totalPrice: 3,
+	purchasable: false,
+	purchasing: false,
+	loading: false,
+	error: false
+}
+
+componentDidMount () {
+	axios.get('https://react-skinny-salad.firebaseio.com/orders/ingredients.json')
+		.then( response => {
+			this.setState({ingredients: response.data});
+		})
+		.catch(error => {
+			this.setState({error: true})
+		});
+}
 
 	addIngredientHandler = (type) => {
 		const oldCount = this.state.ingredients[type];
@@ -96,28 +103,37 @@ class SaladBuilder extends Component {
 			for (let key in disabledInfo) {
 				disabledInfo[key] = disabledInfo[key] <= 0
 			}
-			let orderSummary = <OrderSummary 
+		let orderSummary = null;
+		let salad = this.state.error ? <p>Ingredient's can't be loaded!</p> : <Spinner/>;
+		if (this.state.ingredients) {
+			salad = (
+				<Aux>
+					<Salad ingredients={this.state.ingredients}/>
+					<BuildControls
+						ingredientAdded={this.addIngredientHandler}
+						ingredientRemoved={this.removeIngredientHandler}
+						disabled={disabledInfo}
+						purchasable={this.state.purchasable}
+						ordered={this.purchaseHandler}
+						price={this.state.totalPrice}/>
+				</Aux>
+			);
+			orderSummary = <OrderSummary 
 				ingredients={this.state.ingredients}
 				price={this.state.totalPrice}
 				purchaseCancelled={this.purchaseCancelHandler}
 				purchaseContinued={this.purchaseContinueHandler}/>
-			if (this.state.loading) {
-				orderSummary = <Spinner/>;
-			}
+		}
+		if (this.state.loading) {
+			orderSummary = <Spinner/>;
+		}
 		 return (
 			<Aux>
 				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
 				{/* only if purchasing is true Modal should be visible*/}
 				{orderSummary}
 				</Modal>
-				<Salad ingredients={this.state.ingredients}/>
-				<BuildControls
-					ingredientAdded={this.addIngredientHandler}
-					ingredientRemoved={this.removeIngredientHandler}
-					disabled={disabledInfo}
-					purchasable={this.state.purchasable}
-					ordered={this.purchaseHandler}
-					price={this.state.totalPrice}/>
+				{salad}
 			</Aux>
 		 );
 
