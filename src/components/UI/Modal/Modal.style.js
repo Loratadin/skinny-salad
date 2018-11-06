@@ -14,7 +14,6 @@ export const ModalStyle = styled.div`
  top: 30%;
  box-sizing: border-box;
  transition: all 0.3s ease-out;
- text-align: center;
  ${media.desktopL`
   width: 500px;
   left: calc(50% - 250px);
