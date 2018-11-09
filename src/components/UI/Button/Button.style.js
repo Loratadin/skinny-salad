@@ -13,6 +13,5 @@ export const Button = styled.a`
     margin: 10px;
     &:first-of-type {
         margin-left: 0;
-        padding-left: 0;
     }
 `;
