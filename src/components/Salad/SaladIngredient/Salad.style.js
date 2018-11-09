@@ -16,8 +16,4 @@ export const Salad = styled.div`
     width: 450px;
 	height: 400px;
     `}
-    ${media.desktopXL`
-	width: 700px;
-	height: 410px;
-    `}
 `;
