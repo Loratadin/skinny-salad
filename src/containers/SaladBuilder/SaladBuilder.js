@@ -25,6 +25,7 @@ state = {
 }
 
 componentDidMount () {
+	console.log(this.props);
 	axios.get('https://react-skinny-salad.firebaseio.com/orders/ingredients.json')
 		.then( response => {
 			this.setState({ingredients: response.data});
@@ -71,29 +72,29 @@ componentDidMount () {
 	}
 
 	purchaseContinueHandler = () => {
-		// alert('You continue!');
-		this.setState( {loading: true} );
-		const order = {
-			ingredients: this.state.ingredients,
-			price: this.state.totalPrice,
-			customer: {
-				name: 'Tania Shulga',
-				address: {
-					street: 'TestStreet',
-					zipCode: '37287',
-					city: 'McKinney'
-				},
-				email: 'test@test.com'
-			},
-			deliveryMethod: 'fastest'
-		}
-		axios.post('/orders.json', order)
-			.then(response => {
-				this.setState( {loading: false, purchasing: false} );
-			})
-			.catch(error => {
-				this.setState( {loading: false, purchasing: false} );
-			});
+		// this.setState( {loading: true} );
+		// const order = {
+		// 	ingredients: this.state.ingredients,
+		// 	price: this.state.totalPrice,
+		// 	customer: {
+		// 		name: 'Tania Shulga',
+		// 		address: {
+		// 			street: 'TestStreet',
+		// 			zipCode: '37287',
+		// 			city: 'McKinney'
+		// 		},
+		// 		email: 'test@test.com'
+		// 	},
+		// 	deliveryMethod: 'fastest'
+		// }
+		// axios.post('/orders.json', order)
+		// 	.then(response => {
+		// 		this.setState( {loading: false, purchasing: false} );
+		// 	})
+		// 	.catch(error => {
+		// 		this.setState( {loading: false, purchasing: false} );
+		// 	});
+		this.props.history.push('/checkout');
 	}
 
  	render() {

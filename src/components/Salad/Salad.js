@@ -1,8 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Salad } from './SaladIngredient/Salad.style';
 import SaladIngredient from './SaladIngredient/SaladIngredient';
 
 const salad = (props) => {
+	console.log(props);
 	let transformedIngredients = Object.keys(props.ingredients)
 	//keys method will transform our object 'ingredients' into array
 		.map(igKey => {
@@ -28,4 +30,4 @@ const salad = (props) => {
 	);
 };
 
-export default salad;
+export default withRouter(salad);
