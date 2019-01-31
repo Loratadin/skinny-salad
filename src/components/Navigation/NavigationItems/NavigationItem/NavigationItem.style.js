@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../../../theme/media';
 
+/*eslint-disable */
 export const NavigationItem = styled.div`
     margin: 10px 0; 
     box-sizing: border-box;

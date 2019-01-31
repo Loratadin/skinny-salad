@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/*eslint-disable */
 export const SaladBed = styled.div`
 	height: 13%;
  	width: 80%;
@@ -10,10 +11,10 @@ export const SaladBed = styled.div`
 `;
 
 export const Topping = styled.div`
-				width: 80%;
+	width: 80%;
     height: 3%;
-				background: linear-gradient(#bf3813, #815a07);
-				border-radius: 30%;
+	background: linear-gradient(#bf3813, #815a07);
+	border-radius: 30%;
     margin: 2% auto;
 `;
 
@@ -62,7 +63,7 @@ export const BlueBerry = styled.div`
 `;
 
 export const CranBerry = styled.div`
-				width: 10%;
+	width: 10%;
     height: 40%;
     position: absolute;
     background-color: #670318;
@@ -70,9 +71,9 @@ export const CranBerry = styled.div`
     top: 50%;
     border-radius: 57%;
     transform: rotate(10deg);
-				box-shadow: inset -3px 0 #38040f;
-				&:before {
-					content: "";
+	box-shadow: inset -3px 0 #38040f;
+	&:before {
+		content: "";
     	width: 100%;
     	height: 100%;
     	position: absolute;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../../theme/media';
 
+/*eslint-disable */
 export const NavigationItems = styled.ul`
     margin: 0;
     padding: 0;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../../theme/media';
 
+/*eslint-disable */
 export const ModalStyle = styled.div`
  position: fixed;
  z-index: 2;

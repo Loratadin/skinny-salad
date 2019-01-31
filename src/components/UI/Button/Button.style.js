@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/*eslint-disable */
 export const Button = styled.a`
     background-color: #5C9210;
     border: none;

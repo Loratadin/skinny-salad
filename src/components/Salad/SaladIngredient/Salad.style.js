@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../../theme/media';
 
+/*eslint-disable */
 export const Salad = styled.div`
 	width: 100%;
 	margin: auto;
