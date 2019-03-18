@@ -25,7 +25,6 @@ state = {
 }
 
 componentDidMount () {
-	console.log(this.props);
 	axios.get('https://react-skinny-salad.firebaseio.com/orders/ingredients.json')
 		.then( response => {
 			this.setState({ingredients: response.data});
@@ -117,7 +116,7 @@ componentDidMount () {
 		}
 		 return (
 			<Aux>
-				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+				 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
 				{/* only if purchasing is true Modal should be visible*/}
 				{orderSummary}
 				</Modal>
