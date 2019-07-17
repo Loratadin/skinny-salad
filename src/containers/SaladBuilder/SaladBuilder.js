@@ -14,14 +14,13 @@ const INGREDIENT_PRICES = {
 	topping: 0.2
 }
 class SaladBuilder extends Component {
-
 state = {
 	ingredients: null,
 	totalPrice: 3,
 	purchasable: false,
 	purchasing: false,
 	loading: false,
-	error: false
+	error: false,
 }
 
 componentDidMount () {
@@ -105,7 +104,7 @@ componentDidMount () {
 						price={this.state.totalPrice}/>
 				</Aux>
 			);
-			orderSummary = <OrderSummary 
+			orderSummary = <OrderSummary
 				ingredients={this.state.ingredients}
 				price={this.state.totalPrice}
 				purchaseCancelled={this.purchaseCancelHandler}

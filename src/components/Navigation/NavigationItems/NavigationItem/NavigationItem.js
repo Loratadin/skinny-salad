@@ -4,8 +4,7 @@ import { NavigationItem } from './NavigationItem.style';
 
 const navigationItem = (props) => (
     <NavigationItem>
-        <NavLink
-            to={props.link}>{props.children}</NavLink>
+        <NavLink to={props.link}>{props.children}</NavLink>
     </NavigationItem>
 );
 
