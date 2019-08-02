@@ -18,7 +18,7 @@ class ContactData extends Component {
 
     orderHandler = (event) => {
         event.preventDefault();
-        this.setState( {loading: true} );
+        // this.setState( {loading: true} );
 		const order = {
 			ingredients: this.props.ingredients,
 			price: this.props.price,
@@ -53,9 +53,9 @@ class ContactData extends Component {
                 <Button clicked={this.orderHandler}>ORDER</Button>
                 </form>
         );
-        if (this.state.loading) {
-            form = <Spinner/>;
-        }
+        // if (this.state.loading === true) {
+        //     form = <Spinner/>;
+        // }
         return (
             <div className="ContactData">
                 <h4>Enter your Contact Data</h4>

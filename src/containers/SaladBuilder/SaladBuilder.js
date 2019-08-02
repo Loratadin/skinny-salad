@@ -110,9 +110,9 @@ componentDidMount () {
 				purchaseCancelled={this.purchaseCancelHandler}
 				purchaseContinued={this.purchaseContinueHandler}/>
 		}
-		if (this.state.loading) {
-			orderSummary = <Spinner/>;
-		}
+		// if (this.state.loading === true) {
+		// 	orderSummary = <Spinner/>;
+		// }
 		 return (
 			<Aux>
 				 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
