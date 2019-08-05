@@ -1,11 +1,11 @@
 import React from 'react';
 import saladLogo from '../../assets/images/logo.png';
-import { Logo } from './Logo.style';
+import './logo.css';
 
 const logo = (props) => (
-    <Logo>
-        <img src={saladLogo} alt="SkinnySalad"/>
-    </Logo>
+    <div className="logo__wrap">
+        <img src={saladLogo} alt="SkinnySalad" className="logo__image"/>
+    </div>
 );
 
 export default logo;
