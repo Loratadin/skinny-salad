@@ -1,7 +1,6 @@
 import React , { Component } from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import { SideDrawer, SideDrawerLogoContainer } from './SideDrawer.style';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import './SideDrawer.css';
 
@@ -19,14 +18,14 @@ class sideDrawer extends Component  {
             {isDrawerVisible && (
                 <div>
                     <Backdrop show={this.props.open} clicked={this.props.closed}/>
-                        <SideDrawer id="side-drawer"  onClick={this.toggleSideDrawer}>
-                            <SideDrawerLogoContainer>
+                        <div id="side-drawer"  onClick={this.toggleSideDrawer} className="side-drawer">
+                            <div className="side-drawer__logo-container">
                                 <Logo/>
-                            </SideDrawerLogoContainer>
+                            </div>
                             <nav>
                                 <NavigationItems/>
                             </nav>
-                        </SideDrawer>
+                        </div>
                 </div>
             )}
         </div>
