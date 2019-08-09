@@ -2,7 +2,7 @@ import React , { Component } from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Backdrop from '../../UI/Backdrop/Backdrop';
-import './SideDrawer.css';
+import './sideDrawer.css';
 
 class sideDrawer extends Component  {
     state = {
