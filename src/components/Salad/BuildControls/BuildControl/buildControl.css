@@ -1,0 +1,36 @@
+.buildcontrol__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+.buildcontrol__label {
+  padding: 10px;
+  width: 80px;
+  color: green;
+}
+.buildcontrol__button {
+  display: block;
+  font: inherit;
+  text-align: center;
+  padding: 5px;
+  margin: 0 5px;
+  width: 80px;
+  border: 1px solid #ebed24;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  color: green;
+  background-color: #ebed24;
+}
+.buildcontrol__button:hover,
+.buildcontrol__button:active {
+  background-color: #8cf72e;
+}
+.buildcontrol__button:disabled,
+.buildcontrol__button:hover:disabled {
+  background-color: #ac9980;
+  border: 1px solid #7e7365;
+  color: #ccc;
+  cursor: default;
+}

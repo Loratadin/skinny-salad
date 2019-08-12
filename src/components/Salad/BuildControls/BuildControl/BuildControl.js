@@ -1,15 +1,15 @@
 import React from "react";
-import { BuildControl, Label, BCButton } from "./BuildControl.style";
+import "./buildControl.css";
 
 const buildControl = props => {
     return (
-        <BuildControl>
-            <Label>{props.label}</Label>
-            <BCButton onClick={props.removed} disabled={props.disabled}>
+        <div className="buildcontrol__container">
+            <div className="buildcontrol__label">{props.label}</div>
+            <div className="buildcontrol__button" onClick={props.removed} disabled={props.disabled}>
                 Less
-      </BCButton>
-            <BCButton onClick={props.added}>More</BCButton>
-        </BuildControl>
+            </div>
+            <div className="buildcontrol__button" onClick={props.added}>More</div>
+        </div>
     );
 };
 
