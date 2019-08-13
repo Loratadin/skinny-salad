@@ -1,6 +1,6 @@
 import React from 'react';
-import { BuildControls, Price, OrderButton } from './BuildControls.style';
 import BuildControl from './BuildControl/BuildControl';
+import './buildControls.css';
 
 const controls = [
 	{ label: 'Berry', type: 'berry' },
@@ -9,8 +9,8 @@ const controls = [
 
 const buildControls = (props) => {
 	return (
-		<BuildControls>
-			<Price>Current PRICE: {props.price.toFixed(2)}</Price>
+		<div className="buildcontrols__container">
+			<div className="buildcontrols__price">Current PRICE: {props.price.toFixed(2)}</div>
 			{controls.map(ctrl => (
 				<BuildControl
 					key={ctrl.label}
@@ -19,10 +19,14 @@ const buildControls = (props) => {
 					removed={() => props.ingredientRemoved(ctrl.type)}
 					disabled={props.disabled[ctrl.type]} />
 			))}
-			<OrderButton
+			<div
+				className="buildcontrols__order-button"
 				disabled={props.purchasable}
-				onClick={props.ordered}>ORDER NOW</OrderButton>
-		</BuildControls>
+				onClick={props.ordered}
+			>
+				ORDER NOW
+			</div>
+		</div>
 	)
 };
 
