@@ -1,0 +1,21 @@
+.salad__container {
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  overflow: scroll;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 451px) {
+  .salad__container {
+    width: 350px;
+    height: 300px;
+  }
+}
+@media (min-width: 769px) {
+  .salad__container {
+    width: 450px;
+    height: 400px;
+  }
+}

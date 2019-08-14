@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Salad } from './SaladIngredient/Salad.style';
 import SaladIngredient from './SaladIngredient/SaladIngredient';
+import './salad.css';
 
 const salad = (props) => {
 	let transformedIngredients = Object.keys(props.ingredients)
@@ -21,11 +21,11 @@ const salad = (props) => {
 			transformedIngredients = <p>Please start adding ingredients!</p>;
 		}
  	return (
-		<Salad>
+		<div className="salad__container">
 			<SaladIngredient type="topping" />
 			{transformedIngredients}
 			<SaladIngredient type="salad-bed" />
-		</Salad>
+		</div>
 	);
 };
 

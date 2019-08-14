@@ -1,0 +1,80 @@
+.salad-ingredient__salad-bed {
+  height: 13%;
+  width: 80%;
+  background: linear-gradient(#5bec65, #368c3c);
+  border-radius: 0 0 90px 90px;
+  box-shadow: inset -15px 0 #0e6514;
+  margin: 2% auto;
+}
+.salad-ingredient__salad-topping {
+  width: 80%;
+  height: 3%;
+  background: linear-gradient(#bf3813, #815a07);
+  border-radius: 30%;
+  margin: 2% auto;
+}
+.salad-ingredient__salad-berries-wrapper {
+  height: 20%;
+  width: 80%;
+  border-radius: 50% 50% 0 0;
+  margin: 2% auto;
+  position: relative;
+}
+.salad-ingredient__salad-berries-blueberry {
+  width: 10%;
+  height: 40%;
+  position: absolute;
+  background-color: #1c124d;
+  left: 30%;
+  top: 64%;
+  border-radius: 57%;
+  transform: rotate(-20deg);
+  box-shadow: inset -2px -3px #140d36;
+}
+.salad-ingredient__salad-berries-blueberry:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #1c124d;
+  left: -170%;
+  top: -260%;
+  border-radius: 57%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px 2px #140d36;
+}
+.salad-ingredient__salad-berries-blueberry:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #1c124d;
+  left: 180%;
+  top: -50%;
+  border-radius: 57%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px -3px #140d36;
+}
+.salad-ingredient__salad-berries-cranberry {
+  width: 10%;
+  height: 40%;
+  position: absolute;
+  background-color: #670318;
+  left: 64%;
+  top: 50%;
+  border-radius: 57%;
+  transform: rotate(10deg);
+  box-shadow: inset -3px 0 #38040f;
+}
+.salad-ingredient__salad-berries-cranberry:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #670318;
+  left: 150%;
+  top: -130%;
+  border-radius: 57%;
+  transform: rotate(90deg);
+  box-shadow: inset 1px 3px #38040f;
+}
