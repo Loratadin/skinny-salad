@@ -1,0 +1,15 @@
+.button__container {
+  background-color: #5c9210;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px;
+  margin: 10px;
+}
+.button__container:first-of-type {
+  margin-left: 0;
+}
