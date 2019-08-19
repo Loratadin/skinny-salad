@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { SaladBed, Topping, BerryContainer, BlueBerry, CranBerry } from './SaladIngredient.style.js';
 import PropTypes from 'prop-types';
 import './saladIngredient.css';
 class SaladIngredient extends Component {
