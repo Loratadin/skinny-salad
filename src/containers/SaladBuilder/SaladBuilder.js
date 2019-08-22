@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux/Aux';
 import Salad from '../../components/Salad/Salad';
 import BuildControls from '../../components/Salad/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -92,7 +91,7 @@ componentDidMount () {
 		let salad = this.state.error ? <p>Ingredient's can't be loaded!</p> : <Spinner/>;
 		if (this.state.ingredients) {
 			salad = (
-				<Aux>
+				<React.Fragment>
 					<Salad ingredients={this.state.ingredients}/>
 					<BuildControls
 						ingredientAdded={this.addIngredientHandler}
@@ -101,7 +100,7 @@ componentDidMount () {
 						purchasable={this.state.purchasable}
 						ordered={this.purchaseHandler}
 						price={this.state.totalPrice}/>
-				</Aux>
+				</React.Fragment>
 			);
 			orderSummary = <OrderSummary
 				ingredients={this.state.ingredients}
@@ -110,13 +109,13 @@ componentDidMount () {
 				purchaseContinued={this.purchaseContinueHandler}/>
 		}
 		 return (
-			<Aux>
+			<React.Fragment>
 				 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
 				{/* only if purchasing is true Modal should be visible*/}
 				{orderSummary}
 				</Modal>
 				{salad}
-			</Aux>
+			</React.Fragment>
 		 );
 
  	}
